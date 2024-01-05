@@ -26,7 +26,7 @@ let sectioneers = document.querySelectorAll('.sectioneer');
 window.onscroll = () => {
   sectioneers.forEach(sectioneer => {
     let top = window.scrollY;
-    let offset = sectioneer.offsetTop - 200;
+    let offset = sectioneer.offsetTop - 600;
     let height = sectioneer.offsetHeight;
 
     if (top >= offset && top < offset + height) {

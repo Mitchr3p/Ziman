@@ -8,7 +8,7 @@ body {
   padding: 0;
   line-height: 1.6;
   word-spacing: 1.3px;
-  font-family: 'Karla', 'Inconsolata', sans-serif;
+  font-family: 'Karla', 'Inconsolata', 'Stint Ultra Expanded', sans-serif;
   overflow-x: hidden;
 }
 
@@ -26,12 +26,49 @@ a {
 }
 
 button {
-  padding: 1rem 1.5rem;
+  background-color: #ffd6ef;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
+  font-family: 'Karla';
+  transition: transform .5s;
+}
+
+button:hover {
+  background-color: #262626;
+  color: white;
+  font-family: 'Inconsolata';
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+p {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
 .navigation {
-  background-color: rgb(201, 171, 171);
+  background-color: #ffd6ef;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -49,8 +86,21 @@ button {
   font-family: 'Karla';
 }
 
+.nav-content h1 {
+  font-family: 'Stint Ultra Expanded';
+  font-size: clamp(1.3rem, 2.7vw, 3rem);
+}
+
+.nav-content a {
+  font-family: 'Karla';
+  background-color: #ffd6ef;
+  padding: 5px 20px;
+  border-radius: 25px;
+}
+
 .nav-content .nav-links {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -72,60 +122,92 @@ button {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #1f242d;
+  height: 100svh;
+  background: #262626;
 }
 
 .sectioneer .animate {
-  transition: 1s;
-}
-
-/* h1 {
-  font-size: 90px;
-  color: white;
-}
-
-p {
-  font-size: 35px;
-  color: aqua;
-} */
-
-.sec-1 .animate {
-  transform: translateX(-100%);
-  background-color: #1f242d;
-  transition: all 1s ease-in-out;
-}
-
-.sec-1.show-animate .animate {
-  transform: translateX(0);
+  transition: .3s;
 }
 
 .bg-change {
-  background-color: burlywood;
-  transition: all 1s;
+  background-color: #ffd6ef;
+  transition: all .3s;
+}
+
+.bg-change .s1-container h1 {
+  color: #262626;
+}
+
+.bg-change button {
+  background-color: white;
+  color: #262626;
+}
+
+.sec-1 .animate {
+  transform: scale(1.15);
+  /* transition: all .3s ease-in-out; */
+}
+
+.sec-1.show-animate .animate {
+  transform: scale(1);
+}
+
+.s1-container {
+  font-family: 'Inconsolata';
+  text-align: center;
+  max-width: 700px;
+  margin: 0 10%;
+}
+
+.s1-container h1 {
+  color: #ffd6ef;
+  font-size: clamp(1.7rem, 7vw, 3rem);
+}
+
+@media (max-width: 680px) {
+  .s1-container {
+    font-family: 'Inconsolata';
+    text-align: center;
+    max-width: 400px;
+  }
+}
+
+/* SECTION-2 */
+
+.sec-2 {
+  /* height: auto; */
+  border: 2px solid black;
 }
 
 .sec-2.show-animate{
-  background-color: burlywood;
-  transition: all 3s;
+  background-color: #ffd6ef;
+  transition: all .3s;
 }
 
-
-h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
+.sec-2 .s2-img {
+  max-width: 600px;
+  min-width: 0;
 }
 
-h2 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+.s2-container {
+  display: flex;
+  margin: 0 10%;
 }
 
-h3 {
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
+.anime {
+  border: 2px solid blue;
+  max-width: 400px;
+  min-width: 0;
+  color: #25084A;
+  font-weight: bold;
+  font-family: 'Inconsolata';
 }
 
-h4 {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+.anime .spa-1 {
+  font-family: 'Karla';
 }
 
-p {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+.anime .spa-2::before {
+  content: "";
 }
