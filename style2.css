@@ -1,9 +1,17 @@
 body {
-  background-color: #ffd6ef;
+  background-color: #055761;
 }
 
 h1 {
   color: #262626;
+}
+
+.navigation {
+  background-color: #055761;
+}
+
+.nav-links a {
+  background-color: #055761;
 }
 
 .first-sestion {
@@ -18,6 +26,33 @@ h1 {
   max-width: 700px;
   text-align: center;
   font-family: 'Inconsolata';
+}
+
+.sub1 h1 {
+  font-size: relative;
+  color: white;
+}
+
+.sub1 h1:before,
+.sub1 h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sub1 h1::before {
+  background-color: #055761;
+  animation: moverr 3s steps(20) forwards;
+  animation-delay: 2s;
+}
+
+@keyframes moverr {
+  to {
+    left: 100%;
+  }
 }
 
 .popupButton {
@@ -66,47 +101,142 @@ h1 {
   }
 }
 
-.second-sestion {
-  display: flex;
-  position: sticky;
-  z-index: 100;
-  top: 90px;
-  height: 100vh;
-  height: 100svh;
-  margin: 0 10%;
-  overflow: hidden;
+.containing {
+  margin: 0 5%;
 }
 
-/* .left-image {
-  position: sticky;
-  width: 50%;
-  top: 10%;
-  z-index: 100;
-} */
-
-.imgz img {
-  width: 100%;
+.imgc {
   height: 100vh;
-  margin: 0;
-  display: block;
-  object-fit: cover;
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
 } 
 
-.right-text {
-  height: 100%;
-  width: 50%;
-  padding-left: 15px;
-  background-color: #262626;
+.imgc img {
+  max-width: 640px;
+  min-width: 100px;
+  object-fit: cover;
+  filter: blur(3px);
+  transition: all .5s ease-in-out;
+}
+
+.imgc img:hover {
+  position: relative;
+  z-index: 300;
+  filter: blur(0);
+}
+
+@media (max-width: 920px) {
+  .imgc img {
+    filter: none;
+  } 
+}
+
+@media (max-width: 640px) {
+  .imgc img {
+    display: none;
+  } 
+
+  .imgc .flu {
+    text-align: center;
+  }
+
+  .imgc {
+    height: 80vh;
+  } 
 }
 
 .flu {
-  height: 100vh;
+  text-align: end;
 }
 
-.thru.none .ethos {
-  display: none;
+.ethos h2 {
+  color: #25084A;
+  font-family: 'Karla';
 }
 
-.third-sestion {
-  height: 100vh;
+.ethos p {
+  color: white;
+  font-family: 'Inconsolata';
+  max-width: 400px;
+}
+
+.values h2 {
+  color: #72A4FF;
+  font-family: 'Karla';
+}
+
+.values p {
+  color: white;
+  font-family: 'Inconsolata';
+  max-width: 400px;
+}
+
+.approach h2 {
+  color: #EF9DE9;
+  font-family: 'Karla';
+}
+
+.approach p {
+  color: white;
+  font-family: 'Inconsolata';
+  max-width: 400px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 10%;
+  margin-top: 100px;
+  gap: 30px;
+  color: white;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+@media (max-width: 820px) {
+  .nav-content .nav-links {
+    display: none;
+  }
+
+  .nav-content .nav-btn {
+    display: none;
+  }
+
+  .nav-content .toggle-btn {
+    display: block;
+  }
+
+  .dropdown-menu.open {
+    position: absolute;
+    top: 78px;
+    width: 100%;
+    background-color: #262626;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .dropdown-menu.open a {
+    background-color: #262626;
+    color: white;
+  }
+
+  .dropdown-menu.open a:hover {
+    background-color: #055761;
+    color: #262626;
+    max-width: 200px;
+  }
+
+  .s2-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
