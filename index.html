@@ -29,26 +29,25 @@
       type="text/css"
     />
 
-    <title>Ziman</title>
+    <title>Ziman | Home</title>
   </head>
   <body>
     <header>
       <nav class="navigation">
         <div class="nav-content">
-          <h1>Ziman</h1>
+          <h1 class="hero">Ziman</h1>
           <div class="nav-links">
-            <a href="">About</a>
+            <a href="about.html">About</a>
             <a href="">Projects</a>
             <a href="">People</a>
-            <a href="">Contact</a>
+            <a href="contact.html">Contact</a>
           </div>
           <i class="fa-solid fa-bars toggle-btn"></i>
           <div class="dropdown-menu">
-            <a href="">About</a>
+            <a href="about.html">About</a>
             <a href="">Projects</a>
             <a href="">People</a>
-            <a href="">Contact</a>
-            <button class="dropdown-btn"></button>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
       </nav>
@@ -63,17 +62,27 @@
         <section class="sec-1 sectioneer show-animate">
           <div class="s1-container">
             <h1 class="animate">
-              We're building the foundations for a better future
+              We're<span class="aith"> building</span> the
+              <span class="aith">foundations for a better</span> future
             </h1>
-            <button>Find Out How</button>
+            <button class="popupButton">Find Out How</button>
+            <div class="popupContent popup-content">
+              <h2>Welcome to Pixel Paradise!</h2>
+              <p>
+                Dive into a world of vibrant pixels, each telling a unique
+                story. Uncover pixelated wonders that spark your imagination.
+                Ready to embark on a pixel-perfect journey?
+              </p>
+              <button class="closeButton">Close</button>
+            </div>
           </div>
         </section>
 
         <section class="sec-2 sectioneer">
           <div class="s2-container">
             <div class="animated-text1 anime">
-              <p class="spa-1">"Embark on Epic Adventures"</p>
-              <p class="spa-2">
+              <h3 class="spa-1">"Embark on Epic Adventures"</h3>
+              <p class="spa-2a">
                 "Dive into a world where every click unveils a new realm of
                 excitement. Our gaming platform is crafted to bring joy to
                 players of all levels, from casual gamers to seasoned pros."
@@ -85,20 +94,41 @@
               alt=""
             />
             <div class="animated-text2 anime">
-              <p class="spa-1">"Immerse Yourself in Pixel Perfection"</p>
-              <p class="spa-2">
-                "Immerse yourself in cutting-edge graphics, thrilling
-                storylines, and seamless gameplay. Your journey begins here,
-                where every moment is an adventure waiting to unfold."
-              </p>
+              <h3 class="spa-1">"Immerse Yourself in Pixel Perfection"</h3>
+              <p class="spa-2b"></p>
             </div>
           </div>
+          <div class="footer">
+            <div>
+              <h3>Contact</h3>
+              <p>
+                39 Lorem ipsum dolor sit, <br />
+                Lagos, Nigeria.
+              </p>
+            </div>
+            <div>
+              <h4>Explore</h4>
+              <ul>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Projects</li>
+                <li>People</li>
+                <li>News</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Legal</h4>
+              <ul>
+                <li>Privacy Policy</li>
+                <li>COokie Notice</li>
+              </ul>
+            </div>
+          </div>
+          <!-- <input type="text" id="myInput" placeholder="Type something..." />
+          <p id="output"></p> -->
         </section>
-
-        <section class="sec-3 sectioneer">
-          <h1 class="animate">Hi, im Codehal</h1>
-          <p class="animate">Animation on Scroll using HTML CSS and JS</p>
-        </section>
+        <section class="sec-3 sectioneer"></section>
       </section>
       <script src="app.js"></script>
     </main>

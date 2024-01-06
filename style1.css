@@ -47,6 +47,10 @@ button:hover {
   transform: scale(1.2);
 }
 
+ul {
+  list-style: none;
+}
+
 h1 {
   font-size: clamp(2rem, 4vw, 3rem);
 }
@@ -71,7 +75,7 @@ p {
   background-color: #ffd6ef;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 200;
   top: 0;
   height: 10%;
 }
@@ -89,11 +93,14 @@ p {
 .nav-content h1 {
   font-family: 'Stint Ultra Expanded';
   font-size: clamp(1.3rem, 2.7vw, 3rem);
+  cursor: pointer;
 }
 
 .nav-content a {
   font-family: 'Karla';
+  font-weight: bold;
   background-color: #ffd6ef;
+  color: #262626;
   padding: 5px 20px;
   border-radius: 25px;
 }
@@ -104,25 +111,38 @@ p {
   gap: 20px;
 }
 
+.nav-links a {
+  transition: all .3s;
+}
+
+.nav-links a:hover {
+  background-color: #262626;
+  color: white;
+}
+
 .nav-content .toggle-btn {
   display: none;
   cursor: pointer;
+  color: black;
 }
 
 .nav-content .dropdown-menu {
   display: none;
 }
 
+.chng {
+  background-color: #262626;
+  transition: all .3s;
+}
+
+.chng2 {
+  color: #ffd6ef;
+  transition: all .3s;
+}
 
 /* SECTION-1  */
 
 .sectioneer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  height: 100svh;
   background: #262626;
 }
 
@@ -144,8 +164,16 @@ p {
   color: #262626;
 }
 
+.sec-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .sec-1 .animate {
-  transform: scale(1.15);
+  transform: scale(1.12);
   /* transition: all .3s ease-in-out; */
 }
 
@@ -165,6 +193,54 @@ p {
   font-size: clamp(1.7rem, 7vw, 3rem);
 }
 
+.s1-container h1:hover .aith {
+  opacity: 0;
+  transition: all 1s 3s;
+}
+
+.s1-container .popup-content {
+  display: none;
+}
+
+.popup-content.popon {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #25084A;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.popup-content.popon h2{
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  animation: colorShift1 3s infinite;
+  margin: 0;
+}
+
+@keyframes colorShift1 {
+  0%, 75% {
+    color: #25084A;
+  }
+
+  25% {
+    color: #262626;
+  }
+
+  50% {
+    color: #ffd6ef;
+  }
+
+  100% {
+    color: none;
+  }
+}
+
+
 @media (max-width: 680px) {
   .s1-container {
     font-family: 'Inconsolata';
@@ -175,11 +251,6 @@ p {
 
 /* SECTION-2 */
 
-.sec-2 {
-  /* height: auto; */
-  border: 2px solid black;
-}
-
 .sec-2.show-animate{
   background-color: #ffd6ef;
   transition: all .3s;
@@ -188,26 +259,117 @@ p {
 .sec-2 .s2-img {
   max-width: 600px;
   min-width: 0;
+  height: fit-content;
 }
 
 .s2-container {
   display: flex;
+  gap: 15px;
   margin: 0 10%;
 }
 
-.anime {
-  border: 2px solid blue;
-  max-width: 400px;
-  min-width: 0;
+.animated-text1 {
+  padding: 0 10px;
+  max-width: 3020px;
+  min-width: 200px;
   color: #25084A;
   font-weight: bold;
   font-family: 'Inconsolata';
 }
 
-.anime .spa-1 {
+.animated-text2 {
+  padding: 0 10px;
+  max-width: 400px;
+  min-width: 350px;
+  color: #25084A;
+  font-weight: bold;
+  font-family: 'Inconsolata';
+}
+
+.animated-text1 .spa-1 {
   font-family: 'Karla';
 }
 
-.anime .spa-2::before {
+.animeon .spa-2b{
+  position: relative;
+  width: fit-content;
+  transition: background-color .3s;
+}
+
+.animeon .spa-2b::before{
+  content: "Youtuber";
+  color: #25084A;
+  animation: words 30s infinite;
+}
+
+.animeon .spa-2b::after{
   content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: #ffd6ef;
+  border-left: 2px solid #25084A;
+  right: -8px;
+  animation: cursor .8s infinite, typing 30s steps(24) infinite;
+}
+
+@keyframes cursor {
+  to{
+     border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words {
+  0%,20%{
+      content: "Immerse yourself in Wonder";
+  }
+  21%,40%{
+      content: "Immerse yourself in Creativity";
+  }
+  41%,60%{
+      content: "Immerse yourself in Exploration";
+  }
+  61%,80%{
+      content: "Immerse yourself in Artistry";
+  }
+  81%,100%{
+      content: "Immerse yourself in Inspiration";
+  }
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
+}
+
+@media (max-width: 920px) {
+  .sec-2 .s2-img {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .s2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec-2 .s2-img {
+    display: block;
+    max-width: 300px;
+  }
+}
+
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 10%;
 }
