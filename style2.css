@@ -239,4 +239,16 @@ h1 {
     display: flex;
     justify-content: space-between;
   }
+
+  .ethos {
+    border-top: 4px solid #25084A;
+  }
+
+  .values {
+    border-top: 4px solid #72A4FF;
+  }
+
+  .approach {
+    border-top: 4px solid #EF9DE9;
+  }
 }
